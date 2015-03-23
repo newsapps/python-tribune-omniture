@@ -17,3 +17,37 @@ def to_camelcase(s):
     s = re.sub(r'_([^_])', to_uppercase, s)
 
     return s
+
+PROPERTY_TO_ABBREV = {
+    'LA Times': 'lat',
+    'Chicago Tribune': 'ct',
+    'Morning Call': 'amc',
+    'Orlando Sentinel': 'os',
+    'Hartford Courant': 'hc',
+    'Sun-Sentinel': 'sfss',
+    'Baltimore Sun': 'bs',
+    'Daily Press': 'hrdp',
+}
+
+def property_abbrev(prop):
+    """
+    Get the abbreviation for a Tribune media property
+
+    Args:
+        prop (str): Name of Tribune media property, e.g. "Chicago Tribune"
+
+    Returns:
+        String containing abbreviation for the named property.
+
+    """
+    return PROPERTY_TO_ABBREV[prop]
+
+def slugify(s):
+    """
+    Create a slug version of the string, suitable for being used as part
+    of the pageName property
+    """
+    slug = s.strip()
+    slug = re.sub(r'[^\w\s-]', '', slug)
+    slug = re.sub(r'[-\s]+', '-', slug)
+    return slug
