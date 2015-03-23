@@ -34,6 +34,9 @@ def type_from_path(path):
     """
     Detect story type based on a page's path
 
+    This logic is deprecated and reflects earlier versions of omniture tracker
+    generation.  It is just preserved here for reference.
+
     """
     if path.endswith('.photogallery'):
         page_type = 'photoga.'
@@ -63,17 +66,16 @@ def omnitag(request, story, story_title='', page_type=None):
         containing the JavaScript configuration object.
 
     """
-    path = request.path
     if story:
         story_title = story.get('title', '')
 
-    if page_type is None:
-        page_type = type_from_path(path)
-
     tag_attrs =  {
-        'type': page_type,
         'title': story_title,
     }
+
+    if page_type is not None:
+        tag_attrs['page_type'] = page_type
+
     tag = OmnitureTag(dict(DEFAULTS.items(), **tag_attrs))
     return tag.render()
 
