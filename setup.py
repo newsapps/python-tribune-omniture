@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 
 # PyPI only supports nicely-formatted README files in reStructuredText.
 # Newsapps seems to prefer Markdown.  Use a version of the pattern from
@@ -17,7 +17,7 @@ exec(open('tribune_omniture/version.py').read())
 setup(
     name='tribune_omniture',
     version=__version__,
-    packages=['tribune_omniture'],
+    packages=find_packages(exclude=["tests", "tests.*"]),
     install_requires=[
     ],
     tests_require=[
