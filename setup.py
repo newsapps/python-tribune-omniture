@@ -17,7 +17,7 @@ exec(open('tribune_omniture/version.py').read())
 setup(
     name='tribune_omniture',
     version=__version__,
-    py_modules=['tribune_omniture'],
+    packages=['tribune_omniture'],
     install_requires=[
     ],
     tests_require=[
