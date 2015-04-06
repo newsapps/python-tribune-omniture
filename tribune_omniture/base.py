@@ -201,7 +201,7 @@ class OmnitureTag(object):
         return self._build_hier()
 
     def build_prop1(self):
-        return "D=gn"
+        return "D=pageName"
 
     def build_prop2(self):
         try:
@@ -225,7 +225,7 @@ class OmnitureTag(object):
         return "D=ch"
 
     def build_eVar35(self):
-        return "D=gn"
+        return "D=pageName"
 
     def render(self):
         return generate_data_object_script(**self.build_vars())

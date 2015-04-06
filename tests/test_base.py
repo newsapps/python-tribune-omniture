@@ -237,7 +237,7 @@ class TestOmnitureTag(unittest.TestCase):
 
     def test_build_prop1(self):
         omni_tag = base.OmnitureTag(OMNI_HOME_TAG)
-        self.assertEquals(omni_tag.build_prop1(), 'D=gn')
+        self.assertEquals(omni_tag.build_prop1(), 'D=pageName')
 
     def test_build_prop2(self):
         omni_tag = base.OmnitureTag(OMNI_HOME_TAG)
@@ -296,7 +296,7 @@ class TestOmnitureTag(unittest.TestCase):
 
     def test_build_eVar35(self):
         omni_tag = base.OmnitureTag(OMNI_HOME_TAG)
-        self.assertEquals(omni_tag.build_eVar35(), 'D=gn')
+        self.assertEquals(omni_tag.build_eVar35(), 'D=pageName')
 
     def test_home_tag(self):
         omni_tag = base.OmnitureTag(OMNI_HOME_TAG)
