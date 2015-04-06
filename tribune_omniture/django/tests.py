@@ -20,14 +20,14 @@ class TestTemplateTags(unittest.TestCase):
             'server': 'elections.chicagotribune.com',
             'hier1': 'chicagotribune:news:local:election',
             'hier2': 'news:local:election',
-            'prop1': 'D=gn',
+            'prop1': 'D=pageName',
             'prop2': 'news',
             'prop38': 'dataproject',
             'prop57': 'D=c38',
             'eVar20': 'chicagotribune',
             'eVar21': 'D=c38',
             'eVar34': 'D=ch',
-            'eVar35': 'D=gn',
+            'eVar35': 'D=pageName',
         }
         expected_param_strs = ["{}: '{}'".format(k, v) for k, v in
             expected_params.items()]
