@@ -56,7 +56,7 @@ In your Tarbell config, update the DEFAULT_CONTEXT dictionary so it includes a n
 
 In the head of your project templates, load the Omniture object. Replace PAGE NAME HERE with a name that properly identifies the page the user is viewing:
 
-    {% omnitag request config None 'PAGE NAME HERE' %}
+    {% omnitag request OMNITURE None 'PAGE NAME HERE' %}
 
 In the footer of your project templates, load the Omniture third party script, and pass your domain (do not include a subdomain). By default, the third party navigation and SSOR tracking are disabled. The metrics team recommends disabling the SSOR tracking if page speed is a concern:
 

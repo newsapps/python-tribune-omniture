@@ -32,7 +32,7 @@ class TestExtension(unittest.TestCase):
         # OmnitureExtension class.
         environment = Environment(extensions=[OmnitureExtension])
         # We load our template from a simple string.
-        t = environment.from_string("{% omnitag request, config, None, \
+        t = environment.from_string("{% omnitag request, config.OMNITURE, None, \
                                     'NFL Draft', 'dataproject' %}")
 
         # Here is the context we will pass when we render our template.

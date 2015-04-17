@@ -48,7 +48,7 @@ class OmnitureExtension(Extension):
         """
         # Create a default dictionary based on the values provided by the
         # Jinja config dictionary.
-        defaults = { key:value for key, value in config['OMNITURE'].items() }
+        defaults = { key:value for key, value in config.items() }
 
         defaults.setdefault('type', 'individualarticle')
 
@@ -67,7 +67,7 @@ class OmnitureExtension(Extension):
 
     def omniscript_render(self, domain, disable_nav=True, disable_ssor=True):
         """
-        Template tag to generate the <script> tag to include the 3rd party 
+        Template tag to generate the <script> tag to include the 3rd party
         header JavaScript.
 
         """
