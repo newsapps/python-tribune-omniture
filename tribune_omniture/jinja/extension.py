@@ -36,8 +36,8 @@ class OmnitureExtension(Extension):
 
         # Now output the string that is returned by the method we call.
         return nodes.Output([
-                            self.call_method(method_name, args)
-                            ]).set_lineno(lineno)
+            nodes.MarkSafe(self.call_method(method_name, args))
+        ]).set_lineno(lineno)
 
     def omnitag_render(self, request, config,
                         story, story_title='', page_type=None):
