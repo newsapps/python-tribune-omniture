@@ -23,6 +23,8 @@ setup(
     tests_require=[
         'nose',
         'Django',
+        'Flask',
+        'Jinja2',
     ],
     test_suite='nose.collector',
 )
