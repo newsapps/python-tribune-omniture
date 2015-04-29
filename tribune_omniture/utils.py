@@ -28,6 +28,7 @@ PROPERTY_TO_ABBREV = {
     'Baltimore Sun': 'bs',
     'Daily Press': 'hrdp',
     'RedEye Chicago': 'rec',
+    'Gary Post-Tribune': 'ptb',
 }
 
 def property_abbrev(prop):
