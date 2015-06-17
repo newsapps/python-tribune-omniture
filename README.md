@@ -43,7 +43,7 @@ Implementation with Tarbell (Jinja2) projects
 In your Tarbell config, update the DEFAULT_CONTEXT dictionary so it includes a nested Omniture dictionary, like this:
 
     DEFAULT_CONTEXT = {
-        OMNITURE = {
+        'OMNITURE': {
             'domain': 'nfldraft.chicagotribune.com',
             'sitename': 'Chicago Tribune',
             'section': 'sports',
